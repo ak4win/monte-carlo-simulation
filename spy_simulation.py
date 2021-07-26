@@ -1,6 +1,8 @@
 from pandas_datareader import data
 import pandas_montecarlo
 
+import plotter as plotter
+plot = plotter.Plotter("Simulation", plt)
 
 df = data.get_data_yahoo("SPY")
 df["return"] = df["Adj Close"].pct_change().fillna(0)
